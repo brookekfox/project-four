@@ -1,0 +1,22 @@
+<%= render 'users/nav' %>
+
+<div class="circles">
+	<div class="row">
+		<%= link_to practice_precalcs_path(session['user_id']) do %>
+			<div class="subject-circle col-md-6">
+				<div class="subject">Practice Problems</div>
+			</div>
+		<% end %>
+
+		<%= link_to quiz_precalcs_path(session['user_id']) do %>
+			<div class="subject-circle col-md-6">
+				<div class="subject">Quiz</div>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+<ol class="breadcrumb">
+	<li><%= link_to 'Dashboard', user_path(session['user_id']) %></li>
+	<li class="active">Precalculus</li>
+</ol>

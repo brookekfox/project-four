@@ -1,0 +1,43 @@
+<%= render 'nav' %>
+
+<div class="circles">
+	<div class="row">
+		<%= link_to dash_algebras_path(session['user_id']) do %>
+			<div class="subject-circle col-md-3">
+				<div class="subject">Algebra</div>
+			</div>
+		<% end %>
+
+		<%= link_to dash_business_maths_path(session['user_id']) do %>
+			<div class="subject-circle col-md-3">
+				<div class="subject">Business Math</div>
+			</div>
+		<% end %>
+
+		<%= link_to dash_lowers_path(session['user_id']) do %>
+			<div class="subject-circle col-md-3">
+				<div class="subject">Independent School Entrance Exam <br> Lower</div>
+			</div>
+		<% end %>
+
+		<%= link_to dash_uppers_path(session['user_id']) do %>
+			<div class="subject-circle col-md-3">
+				<div class="subject">Independent School Entrance Exam <br> Upper</div>
+			</div>
+		<% end %>
+	</div>
+
+	<div class="row">
+		<%= link_to dash_precalcs_path(session['user_id']) do %>
+			<div class="subject-circle col-md-3">
+				<div class="subject">Precalculus</div>
+			</div>
+		<% end %>
+
+		<%= link_to dash_proofs_path(session['user_id']) do %>
+			<div class="subject-circle col-md-3">
+				<div class="subject">Proof Writing</div>
+			</div>
+		<% end %>
+	</div>
+</div>

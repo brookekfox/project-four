@@ -1,0 +1,36 @@
+<%= render 'users/nav' %>
+
+<!--find a random entry in the array of available ids-->
+<% ids = Array.new %>
+<% @precalcs.each do |p| %>
+	<% ids.push(p.id) %>
+<% end %>
+<% id = ids.sample %>
+
+<div class="precalc-practice-question">
+	<%= @precalcs.find(id).question %>
+		<br><br>
+	<button type="button" class="btn btn-default" id="precalc-solution-button">Solution</button>
+</div>
+
+<div id="practice-solutions-box" class="practice-solution">
+	<div class="practice-solution-step" style="display:none;">
+		<% @precalcs.find(id).solution.each do |step| %>
+			<%= step %><br>
+			<!--<button type="button" class="btn btn-default">next</button><br>-->
+		<% end %>
+	</div>
+</div>
+
+<div class="next-question">
+	<button type="button" class="btn btn-success btn-lg">
+		<%= link_to 'Next question', functions_precalcs_path(session['user_id']), :style => 'font-decoration:none; color:#f0f0f0' %>
+	</button>
+</div>
+
+<ol class="breadcrumb">
+	<li><%= link_to 'Dashboard', user_path(session['user_id']) %></li>
+	<li><%= link_to 'Precalculus', dash_precalcs_path(session['user_id']) %></li>
+	<li><%= link_to 'Practice', practice_precalcs_path(session['user_id']) %></li>
+	<li class="active">Functions and polynomials</li>
+</ol>

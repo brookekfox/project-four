@@ -1,0 +1,49 @@
+<%= render 'users/nav' %>
+
+<div class="circles">
+	<div class="row">
+		<%= link_to functions_precalcs_path(session['user_id']) do %>
+			<div class="subject-circle col-md-3">
+				<div class="subject">Functions and polynomials</div>
+			</div>
+		<% end %>
+
+		<%= link_to logs_precalcs_path(session['user_id']) do %>
+			<div class="subject-circle col-md-3">
+				<div class="subject">Logarithms</div>
+			</div>
+		<% end %>
+
+		<%= link_to triangles_precalcs_path(session['user_id']) do %>
+			<div class="subject-circle col-md-3">
+				<div class="subject">Right triangle geometry and trigonometric functions for the unit circle</div>
+			</div>
+		<% end %>
+
+		<%= link_to sine_precalcs_path(session['user_id']) do %>
+			<div class="subject-circle col-md-3">
+				<div class="subject">The graphs of sine and cosine</div>
+			</div>
+		<% end %>
+	</div>
+
+	<div class="row">
+		<%= link_to trig_precalcs_path(session['user_id']) do %>
+			<div class="subject-circle col-md-3">
+				<div class="subject">Trigonometric identities and equations</div>
+			</div>
+		<% end %>
+
+		<%= link_to systems_precalcs_path(session['user_id']) do %>
+			<div class="subject-circle col-md-3">
+				<div class="subject">Linear and nonlinear systems of equations and inequalities</div>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+<ol class="breadcrumb">
+	<li><%= link_to 'Dashboard', user_path(session['user_id']) %></li>
+	<li><%= link_to 'Precalculus', dash_precalcs_path(session['user_id']) %></li>
+	<li class="active">Practice</li>
+</ol>

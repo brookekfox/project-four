@@ -1,0 +1,13 @@
+<div class="ruby-form">
+	<%= form_for @user do |f| %>
+		<%= f.text_field :first_name,                placeholder: 'First name' %>
+		<%= f.text_field :last_name,                 placeholder: 'Last name' %><br><br>
+		<%= f.text_field :email,                     placeholder: 'Email' %><br><br>
+		<%= f.password_field :password,              placeholder: 'Password' %><br>
+		<%= f.password_field :password_confirmation, placeholder: 'Confirm password' %><br>
+
+		<%= f.submit %>
+	<% end %>
+
+	<%= link_to 'I\'m already a user!', root_path %>
+</div>

@@ -1,0 +1,30 @@
+<%= render 'users/nav' %>
+
+<!--find a random entry in the array of available ids-->
+<% ids = Array.new %>
+<% @precalcs.each do |p| %>
+	<% ids.push(p.id) %>
+<% end %>
+<% id = ids.sample %>
+
+<div class="practice-question">
+	<%= @precalcs.find(id).question %>
+	<button id="precalc-practice-solution-button">Solution</button>
+</div>
+<div id="practice-solutions-box" class="practice-solution">
+	<div class="practice-solution-step">
+		<% @precalcs.find(id).solution.each do |step| %>
+			<%= step %><br>
+			<button id="precalc-practice-solution-next-button">next</button>
+		<% end %>
+	</div>
+</div>
+
+<button><%= link_to 'Next question', practice_precalcs_path(session['user_id']) %></button>
+
+<ol class="breadcrumb">
+	<li><%= link_to 'Dashboard', user_path(session['user_id']) %></li>
+	<li><%= link_to 'Precalculus', dash_precalcs_path(session['user_id']) %></li>
+	<li><%= link_to 'Practice', practice_precalcs_path(session['user_id']) %></li>
+	<li class="active">Linear and nonlinear systems</li>
+</ol>
