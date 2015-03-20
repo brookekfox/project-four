@@ -22,10 +22,39 @@
 	</div>
 </div>
 
-<div class="next-question">
-	<button type="button" class="btn btn-success btn-lg">
-		<%= link_to 'Next question', functions_precalcs_path(session['user_id']), :style => 'font-decoration:none; color:#f0f0f0' %>
-	</button>
+<div style="margin: 0 auto;width:20%;">
+	<div class="row">
+		<div class="col-md-6">
+			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">
+				Unit circle
+			</button>
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">Unit circle</h4>
+						</div>
+						<div class="modal-body">
+							<%= image_tag('unit-circle.png') %>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="next-question">
+				<button type="button" class="btn btn-success btn-lg">
+					<%= link_to 'Next question', functions_precalcs_path(session['user_id']), :style => 'font-decoration:none; color:#f0f0f0' %>
+				</button>
+			</div>
+		</div>
+	</div>
 </div>
 
 <ol class="breadcrumb">
