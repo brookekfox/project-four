@@ -1,3 +1,35 @@
-// Place all the styles related to the sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.login-signup-buttons {
+  width  : 500px;
+  margin : 0 auto;
+}
+
+.heading {
+  font-size: 74pt;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.subheading {
+  font-size: 20pt;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn-block {
+  border-color: #51bb59;
+}
+.btn-success:hover {
+  background-color: #92d497;
+  border-color: #51bb59;
+}
+
+.form-input {
+  border: 1px solid #51bb59;
+  padding: 10px;
+  border-radius: 8px;
+  width: 300px;
+  margin: 2px;
+  color: #51bb59;
+}
