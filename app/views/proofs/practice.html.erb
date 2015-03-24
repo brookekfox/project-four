@@ -1,1 +1,8 @@
 <%= render 'users/nav' %>
+
+
+<ol class="breadcrumb">
+	<li><%= link_to 'Dashboard', user_path(session['user_id']) %></li>
+	<li><%= link_to 'Proof writing', dash_proofs_path(session['user_id']) %></li>
+	<li class="active">Practice</li>
+</ol>

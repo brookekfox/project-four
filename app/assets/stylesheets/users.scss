@@ -123,3 +123,13 @@ a {
 .navbar-btn {
   margin: 8px;
 }
+.btn-info {
+  background-color: #92d497;
+  border-color: #26aa30;
+  color: white;
+}
+.btn-info:hover {
+  background-color: #26aa30;
+  color: #92d497;
+  border-color: #26aa30;
+}

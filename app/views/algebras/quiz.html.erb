@@ -7,3 +7,9 @@
 <script type="math/tex; mode=display" class="math">
   \sum_{n=1}^\infty {1\over n^2} = {\pi^2\over 6}
 </script>
+
+<ol class="breadcrumb">
+	<li><%= link_to 'Dashboard', user_path(session['user_id']) %></li>
+	<li><%= link_to 'Algebra', dash_algebras_path(session['user_id']) %></li>
+	<li class="active">Quiz</li>
+</ol>

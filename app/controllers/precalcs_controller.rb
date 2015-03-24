@@ -68,7 +68,7 @@ class PrecalcsController < ApplicationController
 	private
 	def precalc_params
 		params.require(:lower).permit(:user_id, :question_type, :question, :solution, :answer_choices,
-																	:correct)
+																	:correct, :hint)
 	end
 	
 end

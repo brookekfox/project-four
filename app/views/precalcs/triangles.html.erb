@@ -11,15 +11,37 @@
 	<%= @precalcs.find(id).question %>
 	<br><br>
 	<button type="button" class="btn btn-default" id="precalc-solution-button">Solution</button>
+
+	<% if @precalcs.find(id).hint != nil %>
+		<button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#hintModal">
+			Hint
+		</button>
+		<!-- Modal -->
+		<div class="modal fade" id="hintModal" tabindex="-1" role="dialog" aria-labelledby="hintModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="hintModalLabel">Hint</h4>
+					</div>
+					<div class="modal-body">
+						<%= @precalcs.find(id).hint %>
+					</div>
+				</div>
+			</div>
+		</div>
+	<% end %>
 </div>
 
 <div id="practice-solutions-box" class="practice-solution">
 	<div class="practice-solution-step" style="display:none;">
 		<% @precalcs.find(id).solution.each do |step| %>
 			<%= step %><br>
-			<!--<button type="button" class="btn btn-default">next</button><br>-->
 		<% end %>
 	</div>
+	<%# if @precalcs.find(id).solution.length > 1 %>
+		<!--<button type="button" class="btn btn-success" id="precalc-solution-next-button">Next</button>-->
+	<%# end %>
 </div>
 
 <div style="margin: 0 auto;width:20%;">

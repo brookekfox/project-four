@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Brooke's Project Four - Test Prep</title>
+    <title>MathAcademy</title>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -12,14 +12,20 @@
 					type="image/png"
 					href="assets/knot.png">
 
-		<script type="text/javascript"
-						src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-		</script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
 		<script type="text/x-mathjax-config">
 			MathJax.Hub.Config({
- 				"HTML-CSS": {availableFonts: ["TeX"]}
+				tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
+				"HTML-CSS": {availableFonts: ["TeX"]}
 			});
 		</script>
+
+		<script type="text/javascript"
+						src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full">
+		</script>
+
 		<style>
 			@font-face {
 				font-family: 'MJX_Math';
@@ -52,8 +58,7 @@
 
 		<%= javascript_include_tag 'application' %>
 		<%= javascript_include_tag 'practice_solution' %>
-		<%= javascript_include_tag 'tabs' %>
-    <%= stylesheet_link_tag    'application', media: "all" %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
 
     <%= csrf_meta_tags %>
   </head>

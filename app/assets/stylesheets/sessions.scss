@@ -2,21 +2,28 @@
   width  : 500px;
   margin : 0 auto;
 }
-
 .heading {
   font-size: 74pt;
   width: 80%;
   margin: 0 auto;
   text-align: center;
+  color: #51bb59;
 }
 .subheading {
-  font-size: 20pt;
+  font-size: 36pt;
   text-align: center;
   width: 80%;
   margin: 0 auto;
   text-align: center;
+  color: #51bb59;
 }
-
+.subsubheading {
+  font-size: 14pt;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  color: #51bb59;
+}
 .btn-block {
   border-color: #51bb59;
 }
@@ -24,7 +31,6 @@
   background-color: #92d497;
   border-color: #51bb59;
 }
-
 .form-input {
   border: 1px solid #51bb59;
   padding: 10px;
