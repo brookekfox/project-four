@@ -36,12 +36,16 @@
 <div id="practice-solutions-box" class="practice-solution">
 	<div class="practice-solution-step" style="display:none;">
 		<% @precalcs.find(id).solution.each do |step| %>
-			<%= step %><br>
+			<% index = @precalcs.find(id).solution.index(step) %>
+			<p id="Step<%= index+1 %>"><%= step %></p>
 		<% end %>
+		<button type="button" class="btn btn-default btn-sm" id="step" onclick="ShowStep()" disabled="true">
+			show next step
+		</button>
+		<button type="button" class="btn btn-default btn-sm" id="reset" onclick="ResetSteps()" disabled="true">
+			reset steps
+		</button>
 	</div>
-	<%# if @precalcs.find(id).solution.length > 1 %>
-		<!--<button type="button" class="btn btn-success" id="precalc-solution-next-button">Next</button>-->
-	<%# end %>
 </div>
 
 <div style="margin: 0 auto;width:50%;">

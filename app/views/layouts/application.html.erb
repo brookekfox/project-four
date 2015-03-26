@@ -20,6 +20,9 @@
 				tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
 				"HTML-CSS": {availableFonts: ["TeX"]}
 			});
+			MathJax.Hub.Queue(function () {
+    		document.getElementById("step").disabled = false;
+  		});
 		</script>
 
 		<script type="text/javascript"
@@ -58,6 +61,7 @@
 
 		<%= javascript_include_tag 'application' %>
 		<%= javascript_include_tag 'practice_solution' %>
+		<%= javascript_include_tag 'step_button' %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
 
     <%= csrf_meta_tags %>

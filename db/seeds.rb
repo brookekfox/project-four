@@ -7,7 +7,8 @@ Precalc.create(
 		question_type: "practice",
 		solution: ["A function is a relationship between two sets, called the domain and the codomain.",
 							 "This relationship is a function when each input can have exactly one output.",
-							 "The set of codomain objects that are actually used by the function is called the range of the function."],
+							 "The set of codomain objects that are actually used by the function is called the range of the
+function."],
 		module_name: "functions",
 		hint:""
 )
@@ -95,9 +96,14 @@ Precalc.create(
 		question:"Identify the amplitude, period, vertical shift, and phase shift of \$y = 3\\sin{\\left(
 2x-\\frac{\\pi}{2}\\right)}\$",
 		question_type: "practice",
-		solution: [],
+		solution: [
+								"The amplitude is \$3\$.",
+								"The period is \$\\pi\$, and the domain is \$(-\\infty,\\infty)\$.",
+								"The vertical shift is \$0\$.",
+								"The phase shift is \$-\\frac{\\pi}{4}\$."
+							],
 		module_name: "sine",
-		hint: ""
+		hint: "Write \$y\$ in the form $$f(x) = A \\sin{(Bx - C)} + D.$$"
 )
 
 Precalc.create(
