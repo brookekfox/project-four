@@ -48,9 +48,9 @@
 	</div>
 </div>
 
-<div style="margin: 0 auto;width:20%;">
-	<div class="row">
-		<div class="col-md-6">
+<div style="margin: 0 auto;width:50%;">
+	<div class="row row-centered">
+		<div class="col-md-4 col-centered">
 			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">
 				Unit circle
 			</button>
@@ -60,7 +60,7 @@
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title" id="myModalLabel">Unit circle</h4>
+							<h3 class="modal-title" id="myModalLabel">Unit circle</h3>
 						</div>
 						<div class="modal-body">
 							<%= image_tag('unit-circle.png') %>
@@ -73,10 +73,40 @@
 			</div>
 		</div>
 
-		<div class="col-md-6">
+		<div class="col-md-4 col-centered">
+			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#trigModal">
+				Logarithms
+			</button>
+			<!-- Modal -->
+			<div class="modal fade" id="trigModal" tabindex="-1" role="dialog" aria-labelledby="trigModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h3 class="modal-title" id="trigModalLabel">Logarithms</h3>
+						</div>
+						<div class="modal-body">
+							<h3>Properties of Logarithms</h3>
+							<p>$$\begin{array}{crlc} \log_b{b} = 1 & \log_b{1} = 0 & b^{\log_b{x}} = x & \log_b{b^x} = x
+								\end{array}$$</p>
+							<p>$$\begin{array}{rl}\log_{b}{a^r} = r \log_b{a} & \log_b{u} = \dfrac{\log_a{u}}{\log_a{b}}
+								\end{array}$$</p>
+							<p>$$\begin{array}{rl}\log_b{uv} = \log_b{u} + \log_b{v} & \log_b{\frac{u}{v}} = \log_b{u} - \log_b{v} \end{array}$$</p>
+							<h3>Interest Formulas</h3>
+							<p>$$\begin{array}{cc} A = P\left(1+\frac{r}{n}\right)^{nt} & A = Pe^{rt} \end{array}$$</p>
+							</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4 col-centered">
 			<div class="next-question">
 				<button type="button" class="btn btn-success btn-lg">
-					<%= link_to 'Next question', logs_precalcs_path(session['user_id']), :style => 'font-decoration:none; color:#f0f0f0' %>
+					<%= link_to 'Next question', trig_precalcs_path(session['user_id']), :style => 'font-decoration:none; color:#f0f0f0' %>
 				</button>
 			</div>
 		</div>
