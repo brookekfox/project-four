@@ -1,1 +1,17 @@
 <%= render 'users/nav' %>
+
+<% @precalcs.each do |q| %>
+	<div class="precalc-quiz-question">
+		<%= q.question %><br><br>
+		<% q.answer_choices.each do |a| %>
+			<button type="button" class="btn btn-default quiz-choices" data-text="<%= a %>" data-correct="<%= q.correct %>"
+							onclick="this.style.backgroundColor = '#51bb59'; this.style.color = 'white'">
+				<%= a %>
+			</button><br><br>
+		<% end %>
+		<%#= form_for @quiz do |f| %>
+			<%#= f.radio_button :format, 'DVD' %><%#= f.label :format, 'DVD', value: 'dvd' %>
+			<%#= f.radio_button :format, 'Blu-Ray' %><%#= f.label :format, 'Blu-Ray', value: 'bluray' %>
+		<%# end %>
+	</div>
+<% end %>

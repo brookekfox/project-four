@@ -8,29 +8,32 @@
 <% id = ids.sample %>
 
 <div class="precalc-practice-question">
-	<%= @precalcs.find(id).question %>
+	<% p = @precalcs.find(id) %>
+	<%# @precalcs.each do |p| %>
+	<%= p.question %>
 	<br><br>
 	<button type="button" class="btn btn-default" id="precalc-solution-button">Solution</button>
 
-	<% if @precalcs.find(id).hint != nil %>
-		<button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#hintModal">
-			Hint
-		</button>
-		<!-- Modal -->
-		<div class="modal fade" id="hintModal" tabindex="-1" role="dialog" aria-labelledby="hintModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="hintModalLabel">Hint</h4>
-					</div>
-					<div class="modal-body">
-						<%= @precalcs.find(id).hint %>
+	<%# if @precalcs.find(id).hint != nil %>
+		<% if p.hint != nil %>
+			<button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#hintModal">
+				Hint
+			</button>
+			<!-- Modal -->
+			<div class="modal fade" id="hintModal" tabindex="-1" role="dialog" aria-labelledby="hintModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="hintModalLabel">Hint</h4>
+						</div>
+						<div class="modal-body">
+							<%= p.hint %>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	<% end %>
+		<% end %>
 </div>
 
 <div id="practice-solutions-box" class="practice-solution">
@@ -89,31 +92,33 @@
 						</div>
 						<div class="modal-body">
 							<h3>Basic Identities</h3>
-							<p> $\begin{array}{rl} \csc{x} = \dfrac{1}{\sin{x}} & \sin{x} = \dfrac{1}{\csc{x}} \newline \sec{x} = \dfrac{1}{\cos{x}} & \cos{x} = \dfrac{1}{\sec{x}} \newline \cot{x} = \dfrac{1}{\tan{x}} = \dfrac{\cos{x}}{\sin{x}} & \tan{x} = \dfrac{1}{\cot{x}} = \dfrac{\sin{x}}{\cos{x}} \end{array}$ </p>
+							<p class="modal-math">$\begin{array}{rl} \csc{x} = \dfrac{1}{\sin{x}} & \sin{x} = \dfrac{1}{\csc{x}} \newline \sec{x} = \dfrac{1}{\cos{x}} & \cos{x} = \dfrac{1}{\sec{x}} \newline \cot{x} = \dfrac{1}{\tan{x}} = \dfrac{\cos{x}}{\sin{x}} & \tan{x} = \dfrac{1}{\cot{x}} = \dfrac{\sin{x}}{\cos{x}} \end{array}$</p>
 
 							<h3>Pythagorean Identities</h3>
-							<p> $\begin{array}{rcl} \sin^2{t} + \cos^2{t} = 1 & \tan^2{t} + 1 = \sec^2{t} & 1 + \cot^2{t} =
+							<p class="modal-math"> $\begin{array}{rcl} \sin^2{t} + \cos^2{t} = 1 & \tan^2{t} + 1 = \sec^2{t} & 1 + \cot^2{t} =
 								\csc^2{t} \\ \sin{(-t)} = -\sin{t} & \cos{(-t)} = \cos{t} & \tan{(-t)} = -\tan{t}
 								\end{array}$ </p>
 
+							<h3>Cofunction Identities</h3>
+							<p class="modal-math" style="background-color: white;">$$\begin{array}{ccc} \sin{\theta} = \cos{
+								(\frac{\pi}{2}-\theta)} & \tan{\theta} = \cot{(\frac{\pi}{2}-\theta)} & \sec{\theta} = \csc{(\frac{\pi}{2}-\theta)} \newline \cos{\theta} = \sin{(\frac{\pi}{2}-\theta)} & \cot{\theta} = \tan{(\frac{\pi}{2}-\theta)} & \csc{\theta} = \sec{(\frac{\pi}{2}-\theta)} \end{array}$$</p>
+
 							<h3>Angle Sum and Difference Identities</h3>
-							<p>$$\begin{array}{rl} \sin{(\alpha + \beta)} = \sin{\alpha}\cos{\beta} + \cos{\alpha}\sin{\beta} & \cos{(\alpha + \beta)} = \cos{\alpha}\cos{\beta} - \sin{\alpha}\sin{\beta} \\ \sin{(\alpha - \beta)} = \sin{\alpha}\cos{\beta} - \cos{\alpha}\sin{\beta} & \cos{(\alpha - \beta)} = \cos{\alpha}\cos{\beta} + \sin{\alpha}\sin{\beta} \end{array}$$</p>
-							<p>$$\begin{array}{rl} \tan{(\alpha+\beta)} = \dfrac{\tan{\alpha}+\tan{\beta}}{1-\tan{\alpha}\tan{\beta}} & \tan{(\alpha-\beta)} = \dfrac{\tan{\alpha}-\tan{\beta}}{1+\tan{\alpha}\tan{\beta}} \end{array}$$</p>
+							<p class="modal-math">$$\begin{array}{rl} \sin{(\alpha + \beta)} = \sin{\alpha}\cos{\beta} + \cos{\alpha}\sin{\beta} & \cos{(\alpha + \beta)} = \cos{\alpha}\cos{\beta} - \sin{\alpha}\sin{\beta} \\ \sin{(\alpha - \beta)} = \sin{\alpha}\cos{\beta} - \cos{\alpha}\sin{\beta} & \cos{(\alpha - \beta)} = \cos{\alpha}\cos{\beta} + \sin{\alpha}\sin{\beta} \end{array}$$</p>
+							<p class="modal-math">$$\begin{array}{rl} \tan{(\alpha+\beta)} = \dfrac{\tan{\alpha}+\tan{\beta}}{1-\tan{\alpha}\tan{\beta}} & \tan{(\alpha-\beta)} = \dfrac{\tan{\alpha}-\tan{\beta}}{1+\tan{\alpha}\tan{\beta}} \end{array}$$</p>
 
 							<h3>Double Angle Identities</h3>
-							<p>$\sin{(2x)} = 2\sin{x}\cos{x}$</p>
-							<p>$\cos{(2x)} = \cos^2{x} - \sin^2{x} = 1 - 2\sin^2{x} = 2\cos^2{x} - 1$</p>
-							<p>$\tan{(2x)} = \dfrac{2\tan{x}}{1-\tan^2{x}}$</p>
+							<p class="modal-math">$\sin{(2x)} = 2\sin{x}\cos{x}$</p>
+							<p class="modal-math">$\cos{(2x)} = \cos^2{x} - \sin^2{x} = 1 - 2\sin^2{x} = 2\cos^2{x} - 1$</p>
+							<p class="modal-math">$\tan{(2x)} = \dfrac{2\tan{x}}{1-\tan^2{x}}$</p>
 
 							<h3>Half Angle Identities</h3>
-							<p>$$\begin{array}{rl} \sin{\left(\frac{x}{2}\right)} = \pm \sqrt{\dfrac{1-\cos{x}}{2}} & \cos{\left(\frac{x}{2}\right)} = \pm \sqrt{\dfrac{1+\cos{x}}{2}} \end{array}$$</p>
-							<p>$\tan{\left(\frac{x}{2}\right)} = \pm \sqrt{\dfrac{1-\cos{x}}{1+\cos{x}}} = \dfrac{1-\cos{x}}{\sin{x}} = \dfrac{\sin{x}}{1+\cos{x}}$</p>
+							<p class="modal-math">$$\begin{array}{rl} \sin{\left(\frac{x}{2}\right)} = \pm \sqrt{\dfrac{1-\cos{x}}{2}} & \cos{\left(\frac{x}{2}\right)} = \pm \sqrt{\dfrac{1+\cos{x}}{2}} \end{array}$$</p>
+							<p class="modal-math">$\tan{\left(\frac{x}{2}\right)} = \pm \sqrt{\dfrac{1-\cos{x}}{1+\cos{x}}} = \dfrac{1-\cos{x}}{\sin{x}} = \dfrac{\sin{x}}{1+\cos{x}}$</p>
 
-							<h3>Sum Identities</h3>
-							<p>$$\begin{array}{rl} \sin{x}+\sin{y} = 2\sin{\left(\frac{x+y}{2}\right)}\cos{\left(\frac{x-y}{2}\right)} & \cos{x}+\cos{y} = 2\cos{\left(\frac{x+y}{2}\right)}\cos{\left(\frac{x-y}{2}\right)} \\ \sin{x}-\sin{y} = 2\cos{\left(\frac{x+y}{2}\right)}\sin{\left(\frac{x-y}{2}\right)} & \cos{x}-\cos{y} = -2\sin{\left(\frac{x+y}{2}\right)}\sin{\left(\frac{x-y}{2}\right)} \end{array}$$</p>
-
-							<h3>Product Identities</h3>
-							<p>$$\begin{array}{rl} \sin{x}\cos{y} = \dfrac{\sin{(x+y)}+\sin{(x-y)}}{2} & \cos{x}\sin{y} = \dfrac{\sin{(x+y)}-\sin{(x-y)}}{2} \\ \cos{x}\cos{y} = \dfrac{\cos{(x-y)}+\cos{(x+y)}}{2} & \sin{x}\sin{y} = \dfrac{\cos{(x-y)}-\cos{(x+y)}}{2} \end{array}$$</p>
+							<h3>Sum and Product Identities</h3>
+							<p class="modal-math">$$\begin{array}{rl} \sin{x}+\sin{y} = 2\sin{\left(\frac{x+y}{2}\right)}\cos{\left(\frac{x-y}{2}\right)} & \cos{x}+\cos{y} = 2\cos{\left(\frac{x+y}{2}\right)}\cos{\left(\frac{x-y}{2}\right)} \\ \sin{x}-\sin{y} = 2\cos{\left(\frac{x+y}{2}\right)}\sin{\left(\frac{x-y}{2}\right)} & \cos{x}-\cos{y} = -2\sin{\left(\frac{x+y}{2}\right)}\sin{\left(\frac{x-y}{2}\right)} \end{array}$$</p>
+							<p class="modal-math">$$\begin{array}{rl} \sin{x}\cos{y} = \dfrac{\sin{(x+y)}+\sin{(x-y)}}{2} & \cos{x}\sin{y} = \dfrac{\sin{(x+y)}-\sin{(x-y)}}{2} \\ \cos{x}\cos{y} = \dfrac{\cos{(x-y)}+\cos{(x+y)}}{2} & \sin{x}\sin{y} = \dfrac{\cos{(x-y)}-\cos{(x+y)}}{2} \end{array}$$</p>
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

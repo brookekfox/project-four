@@ -4,7 +4,12 @@
 }
 $main-font: 'Euclid', serif;
 
-html, body, .math {
+html, body {
+  font-family: $main-font;
+  background-image: url(light_grey.png);
+//  background-image: url(symphony.png);
+}
+.math {
   font-family: $main-font;
 }
 .subject-circle {
@@ -14,6 +19,9 @@ html, body, .math {
   width         : 200px;
   padding       : 4%;
   margin        : 10px;
+}
+.subject-circle:hover {
+  background-color: rgba(81,187,89,.15);
 }
 .subject {
   margin         : 0 auto;

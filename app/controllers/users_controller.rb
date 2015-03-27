@@ -29,7 +29,7 @@ class UsersController < ApplicationController
 	def update
 		@user = User.find(params[:id])
 		if @user.update_attributes(user_params)
-			redirect_to user_path(session['user_id'])
+			redirect_to(:back)
 		else
 			render 'edit'
 		end

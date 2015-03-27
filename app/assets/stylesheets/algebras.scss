@@ -1,9 +1,10 @@
-.precalc-practice-question {
+.precalc-practice-question, .precalc-quiz-question {
   width : 80%;
   padding : 5%;
   border : 4px double #26aa30;
   border-radius : 10px;
   margin : 0 auto;
+  background-color: rgba(240,240,240,.3);
 }
 
 .practice-solution {
@@ -12,6 +13,7 @@
   border : 4px double #92d497;
   border-radius : 10px;
   margin : 0 auto;
+  background-color: rgba(240,240,240,.3);
 }
 
 .hidden {
@@ -23,4 +25,8 @@
 
 .next-question {
   margin: 0 auto;
+}
+
+.modal-math {
+  background-color: white;
 }

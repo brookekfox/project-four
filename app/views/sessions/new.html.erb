@@ -1,74 +1,73 @@
-<div class="background">
+<div class="background-image"></div>
+<div class="content">
 	<div class="heading">
 		MathAcademy
 	</div>
 	<div class="subheading">
-		Math and Test Prep
-	</div>
+		Mathematics and standardized test prep
+	</div><br><br><br><br>
 	<div class="subsubheading">
-		Take quizzes and complete practice problems in a variety of mathematics subjects - from basic algebra to calculus to
-		proof writing and beyond - and standardized tests
-	</div>
-</div>
+		Take quizzes and complete practice problems in a variety of standardized tests and mathematics subjects - from basic
+		algebra to
+		calculus to
+		proof writing and beyond
+	</div><br><br><br><br><br><br><br><br>
 
-<div class="login-signup-buttons">
-	<p class="text-center">
-		<button class="btn btn-default btn-block" data-toggle="modal" data-target="#loginModal">Log in</button>
-	</p>
+	<div class="login-signup-buttons">
+		<p class="text-center">
+			<button class="btn btn-default btn-block" data-toggle="modal" data-target="#loginModal">Log in</button>
+		</p>
 
-	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title">Log in</h4>
-				</div>
+		<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Log in</h4>
+					</div>
 
-				<div class="modal-body">
-					<div class="ruby-form">
-						<%= form_for @user, url: { controller: 'sessions', action: 'create' } do |f| %>
-							<%= f.text_field :email, placeholder: 'email', class:'form-input', autofocus: true %><br>
-							<%= f.password_field :password, placeholder: 'password', class:'form-input' %><br><br>
-							<%= f.submit 'Log in!', class:'btn btn-default btn-login btn-lg' %>
-						<% end %><br>
-						<!--<button type="button" class="btn btn-default btn-login btn-lg">-->
-							<%#= link_to 'Create a new user!', new_user_path %>
-						<!--</button>-->
+					<div class="modal-body">
+						<div class="ruby-form">
+							<%= form_for @user, url: { controller: 'sessions', action: 'create' } do |f| %>
+								<%= f.text_field :email, placeholder: 'email', class:'form-input' %><br>
+								<%= f.password_field :password, placeholder: 'password', class:'form-input' %><br><br>
+								<%= f.submit 'Log in!', class:'btn btn-default btn-login btn-lg' %>
+							<% end %><br>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<p class="text-center">
-		<button class="btn btn-default btn-block" data-toggle="modal" data-target="#signupModal">Sign up</button>
-	</p>
+		<p class="text-center">
+			<button class="btn btn-default btn-block" data-toggle="modal" data-target="#signupModal">Sign up</button>
+		</p>
 
-	<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title">Sign up</h4>
-				</div>
+		<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Sign up</h4>
+					</div>
 
-				<div class="modal-body">
-					<div class="ruby-form">
-						<%= form_for @user do |f| %>
-							<%= f.text_field :first_name,                placeholder: 'First name', class:'form-input' %>
-							<%= f.text_field :last_name,                 placeholder: 'Last name', class:'form-input' %><br><br>
-							<%= f.text_field :email,                     placeholder: 'Email', class:'form-input' %><br><br>
-							<%= f.password_field :password,              placeholder: 'Password', class:'form-input' %><br>
-							<%= f.password_field :password_confirmation, placeholder: 'Confirm password', class:'form-input' %>
-							<br><br>
+					<div class="modal-body">
+						<div class="ruby-form">
+							<%= form_for @user do |f| %>
+								<%= f.text_field :first_name,                placeholder: 'First name', class:'form-input' %>
+								<%= f.text_field :last_name,                 placeholder: 'Last name', class:'form-input' %><br><br>
+								<%= f.text_field :email,                     placeholder: 'Email', class:'form-input' %><br><br>
+								<%= f.password_field :password,              placeholder: 'Password', class:'form-input' %><br>
+								<%= f.password_field :password_confirmation, placeholder: 'Confirm password', class:'form-input' %>
+								<br><br>
 
-							<%= f.submit 'Sign up!', class:'btn btn-default btn-login btn-lg' %>
-						<% end %>
-						<%#= link_to 'I\'m already a user!', root_path %>
+								<%= f.submit 'Sign up!', class:'btn btn-default btn-login btn-lg' %>
+							<% end %>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
+	</div>
 </div>

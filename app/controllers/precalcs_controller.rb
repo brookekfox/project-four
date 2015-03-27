@@ -49,6 +49,7 @@ class PrecalcsController < ApplicationController
 	end
 
 	def new
+		@user = User.find(session['user_id'])
 		@precalc = Precalc.new
 	end
 

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-	resources :users, :algebras, :lowers, :uppers, :business_maths, :proofs
+	resources :users, :algebras, :lowers, :uppers, :business_maths, :proofs, :precalcs
 
 	get 'algebra/dashboard/:id' => 'algebras#dashboard', as: 'dash_algebras'
 	get 'algebra/practice/:id'  => 'algebras#practice', as: 'practice_algebras'
@@ -18,15 +18,15 @@ Rails.application.routes.draw do
 	get 'isee_upper/practice/:id'  => 'uppers#practice', as: 'practice_uppers'
 	get 'isee_upper/quiz/:id'      => 'uppers#quiz', as: 'quiz_uppers'
 
-	get 'precalc/dashboard/:id' => 'precalcs#dashboard', as: 'dash_precalcs'
-	get 'precalc/quiz/:id'      => 'precalcs#quiz', as: 'quiz_precalcs'
-	get 'precalc/practice/:id'  => 'precalcs#practice', as: 'practice_precalcs'
+	get 'precalc/dashboard/:id'					  => 'precalcs#dashboard', as: 'dash_precalcs'
+	get 'precalc/quiz/:id'       					=> 'precalcs#quiz',      as: 'quiz_precalcs'
+	get 'precalc/practice/:id'   					=> 'precalcs#practice',  as: 'practice_precalcs'
 	get 'precalc/practice/functions/:id'  => 'precalcs#functions', as: 'functions_precalcs'
-	get 'precalc/practice/logs/:id'       => 'precalcs#logs', as: 'logs_precalcs'
+	get 'precalc/practice/logs/:id'       => 'precalcs#logs',      as: 'logs_precalcs'
 	get 'precalc/practice/triangles/:id'  => 'precalcs#triangles', as: 'triangles_precalcs'
-	get 'precalc/practice/sine/:id'       => 'precalcs#sine', as: 'sine_precalcs'
-	get 'precalc/practice/trig/:id'       => 'precalcs#trig', as: 'trig_precalcs'
-	get 'precalc/practice/systems/:id'    => 'precalcs#systems', as: 'systems_precalcs'
+	get 'precalc/practice/sine/:id'       => 'precalcs#sine',      as: 'sine_precalcs'
+	get 'precalc/practice/trig/:id'       => 'precalcs#trig',      as: 'trig_precalcs'
+	get 'precalc/practice/systems/:id'    => 'precalcs#systems',   as: 'systems_precalcs'
 
 	get 'proofs/dashboard/:id' => 'proofs#dashboard', as: 'dash_proofs'
 	get 'proofs/practice/:id'  => 'proofs#practice', as: 'practice_proofs'

@@ -8,25 +8,23 @@ Precalc.create(
 		solution: ['A function is a relationship between two sets, called the domain and the codomain.',
 							 'This relationship is a function when each input can have exactly one output.',
 							 'The set of codomain objects that are actually used by the function is called the range of the
-function.'],
-		module_name: 'functions',
-		hint:''
+function.'
+							],
+		module_name: 'functions'
 )
 
 Precalc.create(
 		question: 'What is the range of a function?',
 		question_type: 'practice',
 		solution: ['The set of codomain elements that are actually used by the function is called the range of the function.'],
-		module_name: 'functions',
-		hint:''
+		module_name: 'functions'
 )
 
 Precalc.create(
 		question: 'Does the set of pairs $$(3,6), (3,2), (2,1)$$ define a function?',
 		question_type: 'practice',
 		solution: ['No', 'Since $x=3$ is mapped to two different values, these pairs do not define a function.'],
-		module_name: 'functions',
-		hint:''
+		module_name: 'functions'
 )
 
 Precalc.create(
@@ -52,22 +50,23 @@ Precalc.create(
 							 '$x$-intercept of $f(x)$: DNE, $x$-intercept of $f^{-1}(x)$: $1$',
 							 '$y$-intercept of $f(x)$: $1$, $y$-intercept of $f^{-1}(x)$: DNE',
 							 'Asymptote of $f(x)$: $y = 0$, asymptote of $f^{-1}(x)$: $x = 0$'
-		],
+							],
 		module_name: 'logs',
 		hint:'Use logarithms to find the inverse function. Draw $f(x)$ and $f^{-1}(x)$ on the same plane. Also note that $$\\text{dom}(f) = \\text{ran}(f^{-1}).$$'
 )
 
 Precalc.create(
-		question:'Solve for x: $$e^{2x} - 2e^x - 8 = 0$$',
+		question:'Solve for $x$: $$e^{2x} - 2e^x - 8 = 0$$',
 		question_type: 'practice',
-		solution: ['First we have $$\\begin{align} \\left(e^x\\right)^2 - 2e^x - 8 \&= 0 \\newline (e^x-4)(e^x+2) \&= 0
-\\end{align}$$',
-							 'So either \$e^x-4 = 0\$ or \$e^x+2 = 0\$.',
-							 'If \$e^x-4 = 0\$, then $$\\begin{align} e^x \&= 4 \\newline \\ln{(e^x)} \& \\ln{4} \\newline x\\ln{e}
- \&= \\ln{4} \\newline x \&= \\ln{4}\\end{align}$$',
-							 'If \$e^x+2 = 0\$, then $$\\begin{align} e^x \&= -2 \\newline \\ln{(e^x)} \& \\ln{(-2)} \\newline
-x\\ln{e} \&= \\ln{(-2)}, \\end{align}$$ which is undefined.',
-							 'Thus, \$x = \\ln{4} \\approx 1.3863\$.'],
+		solution: ['First we have $$\\begin{align} e^{2x} - 2e^x - 8 &= 0 \\newline \\left(e^x\\right)^2 - 2e^x - 8 &= 0
+\\newline (e^x-4)(e^x+2) &= 0 \\end{align}$$',
+							 'So either $e^x-4 = 0$ or $e^x+2 = 0$.',
+							 'If $e^x-4 = 0$, then $e^x = 4$. Taking the natural logarithm of both sides, we get
+$$\\begin{align} \\ln{(e^x)} &= \\ln{4} \\newline x\\ln{e} &= \\ln{4} \\newline x &= \\ln{4}\\end{align}$$',
+							 'If $e^x+2 = 0$, then $e^x = -2$. Taking the natural logarithm of both sides, we get
+$$\\begin{align} \\ln{(e^x)} &= \\ln{(-2)} \\newline x\\ln{e} &= \\ln{(-2)} \\newline x &= \\ln{(-2)}, \\end{align}$$ which is undefined.',
+							 'Thus, $x = \\ln{4} \\approx 1.3863$.'
+							],
 		module_name: 'logs',
 		hint: 'Make a polynomial of order 2 and factor.'
 )
@@ -76,8 +75,7 @@ Precalc.create(
 		question:'Find the cofunction equivalent to $\\sin{\\frac{3\\pi}{10}}.$',
 		question_type: 'practice',
 		solution: ['$$\\sin{\\frac{3\\pi}{10}} = \\cos\\left(\\frac{\\pi}{2}-\\frac{3\\pi}{10}\\right) = \\cos\\left(\\frac{5\\pi}{10}-\\frac{3\\pi}{10}\\right) = \\cos{\\frac{2\\pi}{10}} = \\cos{\\frac{\\pi}{5}}$$'],
-		module_name: 'triangles',
-		hint:''
+		module_name: 'triangles'
 )
 
 Precalc.create(
@@ -131,7 +129,14 @@ Precalc.create(
 		question: 'Solve the linear system of equations $$\\begin{align*} 2x-3y &= -2 \\newline 4x+y &= 24 \\end{align*}$$
  by any method.',
 		question_type: 'practice',
-		solution: ['First, we solve the second equation for y: $$\\begin{align} 4x+y &= 24 \\newline y &= 24 - 4x \\end{align}$$', 'Now plug into the first equation the value we found for y: $$2x - 3\\left(24-4x\\right) = -2$$', 'Simplify: $$\\begin{align} 2x - 72 + 12x &= -2 \\newline 2x + 12x &= 70 \\newline 14x &= 70 \\newline x &= 5 \\end{align}$$', 'Now, plug in $$x=5$$ to either equation. We will use the first equation: $$\\begin{align} 2x-3y &= -2 \\newline 2(5)-3y &= -2 \\newline 10-3y &= -2 \\newline -3y &= -12 \\newline y &= 4 \\end{align}$$', 'Let\'s check the answers.', 'Using the second equation, $$\\begin{align}4(5)+(4) &= 24 \\newline 20+4 &= 24 \\newline 24 &= 24 \\end{align}$$'],
+		solution: ['Let\'s solve by substitution.',
+							 'First, we solve the second equation for $y$: $$\\begin{align} 4x+y &= 24 \\newline y &= 24 - 4x
+\\end{align}$$',
+							 'Now plug into the first equation the value we found for $y$: $$2x - 3\\left(24-4x\\right) = -2$$',
+							 'Simplify: $$\\begin{align} 2x - 72 + 12x &= -2 \\newline 2x + 12x &= 70 \\newline 14x &= 70 \\newline x &= 5 \\end{align}$$',
+							 'Now, plug in $x=5$ to either equation. We will use the first equation: $$\\begin{align} 2x-3y &= -2 \\newline 2(5)-3y &= -2 \\newline 10-3y &= -2 \\newline -3y &= -12 \\newline y &= 4 \\end{align}$$',
+							 'Let\'s check the answers.',
+							 'Using the second equation, $$\\begin{align}4(5)+(4) &= 24 \\newline 20+4 &= 24 \\newline 24 &= 24 \\end{align}$$'],
 		module_name: 'systems',
 		hint: 'Use substitution.'
 )
@@ -140,9 +145,12 @@ Precalc.create(
 		question: 'Solve the linear system of equations $$\\begin{align} 2x+y \&= 9 \\newline 3x-y \&=16 \\end{align}$$
 by any method.',
 		question_type: 'practice',
-		solution: ['Add the two equations together to cancel the $y$: $$\\begin{align} 2x+y \&= 9 \\newline 3x-y \&=16 \\newline \\hline 5x \&= 25 \\end{align}$$','Solve for $x$: $$5x = 25 \\Rightarrow x = 5$$','Now use the value for $x$ to solve the value
-of $y$: $$\\begin{align} 2(5)+y \&= 9 \\newline 10+y \&= 9 \\newline y \&= -1 \\end{align}$$','Now check the solution
-by plugging in the values: $$3(5)-(-1) = 16 \\Rightarrow 15 + 1 = 16 \\Rightarrow 16 = 16$$'],
+		solution: ['Let\'s solve by elimination.',
+							 'Add the two equations together to cancel the $y$: $$\\begin{align} 2x+y &= 9 \\newline 3x-y &=16 \\newline \\hline 5x &= 25 \\end{align}$$',
+							 'Solve for $x$: $$\\begin{align} 5x &= 25 \\newline x &= 5 \\end{align}$$',
+							 'Now use the value for $x$ to solve for the value of $y$: $$\\begin{align} 2(5)+y &= 9 \\newline 10+y &= 9 \\newline y &= -1 \\end{align}$$',
+							 'Now check the solution by plugging in the values: $$\\begin{align} 3(5)-(-1) &= 16 \\newline 15 + 1
+&= 16 \\newline 16 &= 16 \\end{align}$$'],
 		module_name: 'systems',
 		hint: 'Use elimination on $y$.'
 )
@@ -171,4 +179,26 @@ Precalc.create(
 Identity.'],
 		module_name: 'trig',
 		hint:'Use the Pythagorean Identity: $$\\sin^2{\\theta} + \\cos^2{\\theta} = 1$$'
+)
+
+Precalc.create(
+		question: 'Write $\\tan{\\theta} + \\cot{\\theta}$ in terms of sine and cosine, and then simplify the expression.',
+		question_type: 'quiz',
+		module_name: 'trig',
+		answer_choices: [
+				'$\\cos{\\theta}\\sin{\\theta}$',
+				'$\\dfrac{1}{\\cos{\\theta}\\sin{\\theta}}$',
+				'$\\dfrac{\\sin^2{\\theta}}{\\cos{\\theta}\\sin{\\theta}} +
+\\dfrac{\\cos^2{\\theta}}{\\cos{\\theta}\\sin{\\theta}}$'
+										],
+		correct: '$\\dfrac{1}{\\cos{\\theta}\\sin{\\theta}}$'
+)
+
+Precalc.create(
+		question:'What is the phase shift of $y = 3\\sin{\\left(2x-\\frac{\\pi}{2}\\right)}$?',
+		question_type: 'quiz',
+		answer_choices: ['$-\\frac{\\pi}{4}$',
+										 '$\\frac{\\pi}{2}$','$-\\pi$'],
+		correct: '$-\\frac{\\pi}{4}$',
+		module_name: 'sine'
 )

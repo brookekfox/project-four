@@ -1,0 +1,31 @@
+<%= render 'users/nav' %>
+<% if @user.is_admin == true %>
+
+	<div class="row">
+		<div class="col-md-6 text-center"><h1 class="heading">Add a precalculus practice problem</h1></div>
+		<div class="col-md-6 text-center"><%= link_to 'Cancel', users_path(session['user_id']) %></div>
+	</div>
+
+	<%= form_for @precalc do |f| %>
+		<div>
+			<%= f.radio_button :question_type, 'practice' %><%= f.label :question_type, 'Practice', value: 'practice' %>
+			<%= f.radio_button :question_type, 'quiz' %><%= f.label :question_type, 'Quiz', value: 'quiz' %><br><br>
+
+			<%= f.text_area :question,    placeholder: 'Enter the question.' %><br>
+
+			Enter steps of the solution:
+				<%= f.text_area :solution, size: 15, name: 'solution[]' %><br>
+
+			<%#= f.text_field :director, placeholder: 'Director' %><br>
+			<%#= f.text_field :writer,   placeholder: 'Writer' %><br><br>
+
+			<%= f.submit 'Add this problem!' %><br>
+
+		</div>
+	<% end %>
+
+<% else %>
+
+	<h1>You can't view this page!</h1>
+
+<% end %>

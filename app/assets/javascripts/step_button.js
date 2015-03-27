@@ -1,5 +1,5 @@
 (function () {
-	var n = 1;
+	var n = 2;
 	//  Make the current step be visible, and increment the step.
 	//  If it is the last step, disable the step button.
 	//  Once a step is taken, the reset button is made available.
