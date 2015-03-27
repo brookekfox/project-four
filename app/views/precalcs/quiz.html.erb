@@ -1,17 +1,53 @@
-<%= render 'users/nav' %>
+<%= render 'nav' %>
 
-<% @precalcs.each do |q| %>
+<% quiz = @user.quiz_choices %>
+
+<% for i in 0..7 do %>
 	<div class="precalc-quiz-question">
-		<%= q.question %><br><br>
-		<% q.answer_choices.each do |a| %>
-			<button type="button" class="btn btn-default quiz-choices" data-text="<%= a %>" data-correct="<%= q.correct %>"
-							onclick="this.style.backgroundColor = '#51bb59'; this.style.color = 'white'">
+		<%= @precalcs[i].question %><br><br>
+		<% @precalcs[i].answer_choices.each do |a| %>
+			<button type="button" class="btn btn-default quiz-choices"
+							id="precalc-quiz-question<%= @precalcs.index(@precalcs[i]) %><%= @precalcs[i].answer_choices.index(a) %>"
+							data-choice="<%= a %>" data-correct="<%= @precalcs[i].correct %>"
+							onclick="this.style.backgroundColor = '#51bb59'; this.style.color = 'white';">
 				<%= a %>
 			</button><br><br>
 		<% end %>
-		<%#= form_for @quiz do |f| %>
-			<%#= f.radio_button :format, 'DVD' %><%#= f.label :format, 'DVD', value: 'dvd' %>
-			<%#= f.radio_button :format, 'Blu-Ray' %><%#= f.label :format, 'Blu-Ray', value: 'bluray' %>
-		<%# end %>
 	</div>
 <% end %>
+
+<div class="quiz-results">
+	<button type="button" class="btn btn-default btn-success btn-block"
+					id="precalc-quiz-submit">Submit</button><br><br><br>
+	<div id="precalc-quiz-results-box" style="display:none">
+		Your score: <br> <span id="precalc-quiz-score"></span> out of 8!
+	</div>
+</div>
+
+
+
+<script>
+	var result = [];
+	for (var i = 0; i < 8; i++) {
+		for (var j = 0; j < 3; j++) {
+			var k = ""+i+ j;
+			document.getElementById('precalc-quiz-question' + k).addEventListener('click', function(){
+				if(this.dataset.choice == this.dataset.correct) {
+//					console.log('good job!');
+					result.push(1);
+				} else {
+//					console.log('wrong');
+					result.push(0);
+				}
+			});
+		}
+	}
+	document.getElementById('precalc-quiz-submit').addEventListener('click', function() {
+		var total = 0;
+		for (var n = 0; n < result.length; n++){
+			total += result[n];
+		}
+		console.log(total);
+		document.getElementById('precalc-quiz-score').innerHTML = total;
+	});
+</script>

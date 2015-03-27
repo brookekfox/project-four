@@ -132,12 +132,13 @@ a {
   margin: 8px;
 }
 .btn-info {
-  background-color: #92d497;
-  border-color: #26aa30;
-  color: white;
+  background-color: #51bb59;
+  border-color: #a8ddac;
 }
 .btn-info:hover {
-  background-color: #26aa30;
-  color: #92d497;
-  border-color: #26aa30;
+  background-color: #a8ddac;
+  border-color: #51bb59;
+}
+.btn-group {
+  margin: 10px 2px 10px 2px;
 }

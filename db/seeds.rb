@@ -129,13 +129,13 @@ Precalc.create(
 		question: 'Solve the linear system of equations $$\\begin{align*} 2x-3y &= -2 \\newline 4x+y &= 24 \\end{align*}$$
  by any method.',
 		question_type: 'practice',
-		solution: ['Let\'s solve by substitution.',
+		solution: ['We solve by substitution.',
 							 'First, we solve the second equation for $y$: $$\\begin{align} 4x+y &= 24 \\newline y &= 24 - 4x
 \\end{align}$$',
 							 'Now plug into the first equation the value we found for $y$: $$2x - 3\\left(24-4x\\right) = -2$$',
 							 'Simplify: $$\\begin{align} 2x - 72 + 12x &= -2 \\newline 2x + 12x &= 70 \\newline 14x &= 70 \\newline x &= 5 \\end{align}$$',
 							 'Now, plug in $x=5$ to either equation. We will use the first equation: $$\\begin{align} 2x-3y &= -2 \\newline 2(5)-3y &= -2 \\newline 10-3y &= -2 \\newline -3y &= -12 \\newline y &= 4 \\end{align}$$',
-							 'Let\'s check the answers.',
+							 'We check the answers.',
 							 'Using the second equation, $$\\begin{align}4(5)+(4) &= 24 \\newline 20+4 &= 24 \\newline 24 &= 24 \\end{align}$$'],
 		module_name: 'systems',
 		hint: 'Use substitution.'
@@ -145,7 +145,7 @@ Precalc.create(
 		question: 'Solve the linear system of equations $$\\begin{align} 2x+y \&= 9 \\newline 3x-y \&=16 \\end{align}$$
 by any method.',
 		question_type: 'practice',
-		solution: ['Let\'s solve by elimination.',
+		solution: ['We solve by elimination.',
 							 'Add the two equations together to cancel the $y$: $$\\begin{align} 2x+y &= 9 \\newline 3x-y &=16 \\newline \\hline 5x &= 25 \\end{align}$$',
 							 'Solve for $x$: $$\\begin{align} 5x &= 25 \\newline x &= 5 \\end{align}$$',
 							 'Now use the value for $x$ to solve for the value of $y$: $$\\begin{align} 2(5)+y &= 9 \\newline 10+y &= 9 \\newline y &= -1 \\end{align}$$',
@@ -158,7 +158,7 @@ by any method.',
 Precalc.create(
 		question:'Prove the identity $$\\frac{\\cot{x}}{\\csc{x}} = \\cos{x}.$$',
 		question_type: 'practice',
-		solution: ['Let\'s simplify the LHS of the equation',
+		solution: ['We simplify the LHS of the equation',
 							 'First, rewrite cotangent and cosecant in terms of sine and cosine: $$\\frac{\\cot{x}}{\\csc{x}} = \\frac{\\frac{\\cos{x}}{\\sin{x}}}{\\frac{1}{\\sin{x}}}$$',
 							 'Then, divide and simplify: $$\\frac{\\frac{\\cos{x}}{\\sin{x}}}{\\frac{1}{\\sin{x}}} = \\frac{\\cos{x}}{\\sin{x}} \\cdot \\frac{\\sin{x}}{1} = \\frac{\\cos{x}}{1} = \\cos{x}$$',
 							 'Now we confirm that $$\\cos{x} = \\frac{\\cot{x}}{\\csc{x}} = \\cos{x}.$$'
@@ -194,6 +194,55 @@ Precalc.create(
 		correct: '$\\dfrac{1}{\\cos{\\theta}\\sin{\\theta}}$'
 )
 
+Precalc.create(
+		question:'What is the phase shift of $y = 3\\sin{\\left(2x-\\frac{\\pi}{2}\\right)}$?',
+		question_type: 'quiz',
+		answer_choices: ['$-\\frac{\\pi}{4}$',
+										 '$\\frac{\\pi}{2}$','$-\\pi$'],
+		correct: '$-\\frac{\\pi}{4}$',
+		module_name: 'sine'
+)
+
+Precalc.create(
+		question:'What is the phase shift of $y = 3\\sin{\\left(2x-\\frac{\\pi}{2}\\right)}$?',
+		question_type: 'quiz',
+		answer_choices: ['$-\\frac{\\pi}{4}$',
+										 '$\\frac{\\pi}{2}$','$-\\pi$'],
+		correct: '$-\\frac{\\pi}{4}$',
+		module_name: 'sine'
+)
+Precalc.create(
+		question:'What is the phase shift of $y = 3\\sin{\\left(2x-\\frac{\\pi}{2}\\right)}$?',
+		question_type: 'quiz',
+		answer_choices: ['$-\\frac{\\pi}{4}$',
+										 '$\\frac{\\pi}{2}$','$-\\pi$'],
+		correct: '$-\\frac{\\pi}{4}$',
+		module_name: 'sine'
+)
+Precalc.create(
+		question:'What is the phase shift of $y = 3\\sin{\\left(2x-\\frac{\\pi}{2}\\right)}$?',
+		question_type: 'quiz',
+		answer_choices: ['$-\\frac{\\pi}{4}$',
+										 '$\\frac{\\pi}{2}$','$-\\pi$'],
+		correct: '$-\\frac{\\pi}{4}$',
+		module_name: 'sine'
+)
+Precalc.create(
+		question:'What is the phase shift of $y = 3\\sin{\\left(2x-\\frac{\\pi}{2}\\right)}$?',
+		question_type: 'quiz',
+		answer_choices: ['$-\\frac{\\pi}{4}$',
+										 '$\\frac{\\pi}{2}$','$-\\pi$'],
+		correct: '$-\\frac{\\pi}{4}$',
+		module_name: 'sine'
+)
+Precalc.create(
+		question:'What is the phase shift of $y = 3\\sin{\\left(2x-\\frac{\\pi}{2}\\right)}$?',
+		question_type: 'quiz',
+		answer_choices: ['$-\\frac{\\pi}{4}$',
+										 '$\\frac{\\pi}{2}$','$-\\pi$'],
+		correct: '$-\\frac{\\pi}{4}$',
+		module_name: 'sine'
+)
 Precalc.create(
 		question:'What is the phase shift of $y = 3\\sin{\\left(2x-\\frac{\\pi}{2}\\right)}$?',
 		question_type: 'quiz',
