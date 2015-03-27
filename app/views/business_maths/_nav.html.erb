@@ -32,17 +32,16 @@
 
 			<div class="btn-group">
 				<button class="btn btn-info btn-sm">
-					<%= link_to 'Precalculus', dash_precalcs_path(session['user_id']), style:"color:#f0f0f0" %>
+					<%= link_to 'Finite Math', dash_business_maths_path(session['user_id']), style:"color:#f0f0f0" %>
 				</button>
 				<button class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu">
-					<li><%= link_to 'Functions and polynomials', functions_precalcs_path(session['user_id']) %></li>
-					<li><%= link_to 'Logarithms', logs_precalcs_path(session['user_id']) %></li>
-					<li><%= link_to 'Right triangle geometry and trigonometric functions for the unit circle', triangles_precalcs_path(session['user_id']) %></li>
-					<li><%= link_to 'The graphs of sine and cosine', sine_precalcs_path(session['user_id']) %></li>
-					<li><%= link_to 'Trigonometric functions and equations', trig_precalcs_path(session['user_id']) %></li>
-					<li><%= link_to 'Linear and nonlinear systems', systems_precalcs_path(session['user_id']) %></li>
+					<li><%= link_to 'Linear equations', dash_business_maths_path(session['user_id']) %></li>
+					<li><%= link_to 'Linear programming', dash_business_maths_path(session['user_id']) %></li>
+					<li><%= link_to 'Saving and loans', dash_business_maths_path(session['user_id']) %></li>
+					<li><%= link_to 'Counting and probability', dash_business_maths_path(session['user_id']) %></li>
+					<li><%= link_to 'Matrices and determinants', dash_business_maths_path(session['user_id']) %></li>
 				</ul>
 			</div>
 

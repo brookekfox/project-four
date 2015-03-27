@@ -1,1 +1,31 @@
-<%= render 'users/nav' %>
+<%= render 'nav' %>
+
+<div class="circles">
+	<div class="row">
+		<%#= link_to functions_precalcs_path(session['user_id']) do %>
+		<div class="subject-circle col-md-3">
+			<div class="subject">Mathematics</div>
+		</div>
+		<%# end %>
+
+		<%#= link_to logs_precalcs_path(session['user_id']) do %>
+		<div class="subject-circle col-md-3">
+			<div class="subject">Critical reading</div>
+		</div>
+		<%# end %>
+
+		<%#= link_to triangles_precalcs_path(session['user_id']) do %>
+		<div class="subject-circle col-md-3">
+			<div class="subject">Writing</div>
+		</div>
+		<%# end %>
+	</div>
+
+</div>
+
+
+<ol class="breadcrumb">
+	<li><%= link_to 'Dashboard', user_path(session['user_id']) %></li>
+	<li><%= link_to 'ISEE - Lower', dash_lowers_path(session['user_id']) %></li>
+	<li class="active">Practice</li>
+</ol>

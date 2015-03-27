@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
 
+  get 'linears/user_id:integer'
+
+  get 'linears/question:text'
+
+  get 'linears/solution:text'
+
+  get 'linears/answer_choices:text'
+
+  get 'linears/correct:text'
+
+  get 'linears/question_type'
+
+  get 'linears/module_name'
+
 	resources :users, :algebras, :lowers, :uppers, :business_maths, :proofs, :precalcs
 
 	get 'algebra/dashboard/:id' => 'algebras#dashboard', as: 'dash_algebras'

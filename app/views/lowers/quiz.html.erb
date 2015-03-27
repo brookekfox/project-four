@@ -1,1 +1,7 @@
-<%= render 'users/nav' %>
+<%= render 'nav' %>
+
+<ol class="breadcrumb">
+	<li><%= link_to 'Dashboard', user_path(session['user_id']) %></li>
+	<li><%= link_to 'ISEE - Lower', dash_lowers_path(session['user_id']) %></li>
+	<li class="active">Quiz</li>
+</ol>

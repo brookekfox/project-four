@@ -1,7 +1,61 @@
-<%= render 'users/nav' %>
+<%= render 'nav' %>
+
+<div class="circles">
+	<div class="row">
+		<%#= link_to functions_precalcs_path(session['user_id']) do %>
+			<div class="subject-circle col-md-3">
+				<div class="subject">Linear equations</div>
+			</div>
+		<%# end %>
+
+		<%#= link_to logs_precalcs_path(session['user_id']) do %>
+			<div class="subject-circle col-md-3">
+				<div class="subject">Linear inequalities</div>
+			</div>
+		<%# end %>
+
+		<%#= link_to triangles_precalcs_path(session['user_id']) do %>
+			<div class="subject-circle col-md-3">
+				<div class="subject">Two-variable linear equations and intro to functions</div>
+			</div>
+		<%# end %>
+
+		<%#= link_to sine_precalcs_path(session['user_id']) do %>
+			<div class="subject-circle col-md-3">
+				<div class="subject">Systems of equations and inequalities</div>
+			</div>
+		<%# end %>
+	</div>
+
+	<div class="row">
+		<%#= link_to trig_precalcs_path(session['user_id']) do %>
+			<div class="subject-circle col-md-3">
+				<div class="subject">Factoring expressions</div>
+			</div>
+		<%# end %>
+
+		<%#= link_to systems_precalcs_path(session['user_id']) do %>
+			<div class="subject-circle col-md-3">
+				<div class="subject">Quadratic equations</div>
+			</div>
+		<%# end %>
+
+		<%#= link_to systems_precalcs_path(session['user_id']) do %>
+		<div class="subject-circle col-md-3">
+			<div class="subject">Exponent expressions and equations</div>
+		</div>
+		<%# end %>
+
+		<%#= link_to systems_precalcs_path(session['user_id']) do %>
+		<div class="subject-circle col-md-3">
+			<div class="subject">Functions</div>
+		</div>
+		<%# end %>
+	</div>
+</div>
 
 <ol class="breadcrumb">
 	<li><%= link_to 'Dashboard', user_path(session['user_id']) %></li>
-	<li><%= link_to 'Algebra', dash_algebras_path(session['user_id']) %></li>
+	<li><%= link_to 'Algebra I', dash_algebras_path(session['user_id']) %></li>
 	<li class="active">Practice</li>
 </ol>

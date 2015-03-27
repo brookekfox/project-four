@@ -1,4 +1,4 @@
-<%= render 'users/nav' %>
+<%= render 'nav' %>
 
 <%= @algebras.first.question %>
 <%= @algebras.first.answer_choices %>
@@ -10,6 +10,6 @@
 
 <ol class="breadcrumb">
 	<li><%= link_to 'Dashboard', user_path(session['user_id']) %></li>
-	<li><%= link_to 'Algebra', dash_algebras_path(session['user_id']) %></li>
+	<li><%= link_to 'Algebra I', dash_algebras_path(session['user_id']) %></li>
 	<li class="active">Quiz</li>
 </ol>

@@ -1,4 +1,5 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default"
+		 xmlns="http://www.w3.org/1999/html">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -32,17 +33,19 @@
 
 			<div class="btn-group">
 				<button class="btn btn-info btn-sm">
-					<%= link_to 'Precalculus', dash_precalcs_path(session['user_id']), style:"color:#f0f0f0" %>
+					<%= link_to 'Algebra I', dash_algebras_path(session['user_id']), style:"color:#f0f0f0" %>
 				</button>
 				<button class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu">
-					<li><%= link_to 'Functions and polynomials', functions_precalcs_path(session['user_id']) %></li>
-					<li><%= link_to 'Logarithms', logs_precalcs_path(session['user_id']) %></li>
-					<li><%= link_to 'Right triangle geometry and trigonometric functions for the unit circle', triangles_precalcs_path(session['user_id']) %></li>
-					<li><%= link_to 'The graphs of sine and cosine', sine_precalcs_path(session['user_id']) %></li>
-					<li><%= link_to 'Trigonometric functions and equations', trig_precalcs_path(session['user_id']) %></li>
-					<li><%= link_to 'Linear and nonlinear systems', systems_precalcs_path(session['user_id']) %></li>
+					<li><%= link_to 'Linear equations', dash_algebras_path(session['user_id']) %></li>
+					<li><%= link_to 'Linear inequalities', dash_algebras_path(session['user_id']) %></li>
+					<li><%= link_to 'Two-variable linear equations and intro to functions', dash_algebras_path(session['user_id']) %></li>
+					<li><%= link_to 'Systems of equations and inequalities', dash_algebras_path(session['user_id']) %></li>
+					<li><%= link_to 'Factoring expressions', dash_algebras_path(session['user_id']) %></li>
+					<li><%= link_to 'Quadratic equations', dash_algebras_path(session['user_id']) %></li>
+					<li><%= link_to 'Exponent expressions and equations', dash_algebras_path(session['user_id']) %></li>
+					<li><%= link_to 'Functions', dash_algebras_path(session['user_id']) %></li>
 				</ul>
 			</div>
 
