@@ -1,0 +1,49 @@
+<%= render 'nav' %>
+
+<div class="circles">
+	<div class="row">
+		<%#= link_to functions_linears_path(session['user_id']) do %>
+		<div class="subject-circle col-md-3">
+			<div class="subject">Vector spaces</div>
+		</div>
+		<%# end %>
+
+		<%#= link_to logs_linears_path(session['user_id']) do %>
+		<div class="subject-circle col-md-3">
+			<div class="subject">Linear transformations</div>
+		</div>
+		<%# end %>
+
+		<%#= link_to triangles_linears_path(session['user_id']) do %>
+		<div class="subject-circle col-md-3">
+			<div class="subject">Subspaces, span, and basis</div>
+		</div>
+		<%# end %>
+
+		<%#= link_to sine_linears_path(session['user_id']) do %>
+		<div class="subject-circle col-md-3">
+			<div class="subject">Matrix theory</div>
+		</div>
+		<%# end %>
+	</div>
+
+	<div class="row">
+		<%#= link_to trig_linears_path(session['user_id']) do %>
+		<div class="subject-circle col-md-3">
+			<div class="subject">Eigenvalues and eigenvectors</div>
+		</div>
+		<%# end %>
+
+		<%#= link_to systems_linears_path(session['user_id']) do %>
+		<div class="subject-circle col-md-3">
+			<div class="subject">Inner product spaces</div>
+		</div>
+		<%# end %>
+	</div>
+</div>
+
+<ol class="breadcrumb">
+	<li><%= link_to 'Dashboard', user_path(session['user_id']) %></li>
+	<li><%= link_to 'Linear Algebra', dash_linears_path(session['user_id']) %></li>
+	<li class="active">Practice</li>
+</ol>

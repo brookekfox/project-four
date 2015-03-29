@@ -1,0 +1,7 @@
+<%= render 'nav' %>
+
+<ol class="breadcrumb">
+	<li><%= link_to 'Dashboard', user_path(session['user_id']) %></li>
+	<li><%= link_to 'Linear Algebra', dash_linears_path(session['user_id']) %></li>
+	<li class="active">Quiz</li>
+</ol>
