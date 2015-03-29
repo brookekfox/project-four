@@ -3,8 +3,8 @@ class CreateLinears < ActiveRecord::Migration
     create_table :linears do |t|
       t.integer :user_id
       t.text :question
-      t.text :solution
-      t.text :answer_choices
+      t.text :solution, array:true, default:[]
+      t.text :answer_choices, array:true, default:[]
       t.text :correct
       t.string :question_type
       t.string :module_name
