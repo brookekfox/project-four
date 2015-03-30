@@ -28,6 +28,12 @@
 	</div>
 
 	<div class="row">
+		<%= link_to dash_linears_path(session['user_id']) do %>
+			<div class="subject-circle col-md-3">
+				<div class="subject">Linear Algebra</div>
+			</div>
+		<% end %>
+
 		<%= link_to dash_precalcs_path(session['user_id']) do %>
 			<div class="subject-circle col-md-3">
 				<div class="subject">Precalculus</div>
