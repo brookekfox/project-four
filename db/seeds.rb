@@ -249,3 +249,141 @@ Precalc.create(
 		correct: 'Yes',
 		module_name: 'functions'
 )
+
+# --------------------------------------------------- proofs ----------------------------------------------
+
+Proof.create(
+		question: 'What is the contrapositive of the following statement? $$\\text{If } n \\in \\mathbb{N}, \\text{ then
+} n \\in \\mathbb{Z}$$',
+		question_type: 'practice',
+		solution: ['If $n \\not\\in \\mathbb{Z}$ then $n \\not\\in \\mathbb{N}$.'],
+		module_name: 'logic'
+)
+
+Proof.create(
+		question: 'Let $n \\in \\mathbb{Z}$. Show that $2n^2 + 4n + 8$ is even.',
+		question_type: 'practice',
+		solution: ['First note that $n \\in \\mathbb{Z}$ is even iff there exists some $k \\in \\mathbb{Z}$ such
+that $n = 2k$.',
+							 'Observe that $2n^2 + 4n + 8 = 2(n^2 + 2n + 4)$.',
+							 'It is clear that $k = n^2 + 2n + 4$ is an integer since the sum and products of integers is again an
+integer.',
+							 'Thus $2n^2 + 4n + 8$ is even.'],
+		module_name: 'logic',
+		hint:'$n \\in \\mathbb{Z}$ is even iff there exists some $k \\in \\mathbb{Z}$ such
+that $n = 2k$.'
+)
+
+Proof.create(
+		question: 'Let $n \\in \\mathbb{Z}$. Show $2n^2 + 4n + 7$ is odd.',
+		question_type: 'practice',
+		solution: ['First note that $n \\in \\mathbb{Z}$ is odd iff there exists some $k \\in \\mathbb{Z}$ such
+that $n = 2k + 1$.',
+							 'Observe that $2n^2 + 4n + 7 = 2(n^2 + 2n + 3) + 1$.',
+							 'It is clear that $k = n^2 + 2n + 3$ is an integer since the sum and products of integers is again an
+integer.',
+							 'Thus $2n^2 + 4n + 7$ is even.'],
+		module_name: 'logic',
+		hint:'$n \\in \\mathbb{Z}$ is odd iff there exists some $k \\in \\mathbb{Z}$ such
+that $n = 2k + 1$.'
+)
+
+Proof.create(
+		question: 'Let $n \\in \\mathbb{Z}$. Show that $3$ divides $(n+1)^2 + 2n^2 + n + 2$.',
+		question_type: 'practice',
+		solution: ['Observe that $$\\begin{align} (n+1)^2 + 2n^2 + n + 2 &= n^2 + 2n + 1 + 2n^2 + n + 2 \\newline &= 3(n^2
+ + n + 1). \\end{align}$$',
+							 'It is clear that $n^2 + n + 1$ is an integer.',
+							 'Thus $3$ divides $(n+1)^2 + 2n^2 + n + 2$.'],
+		module_name: 'logic'
+)
+
+Proof.create(
+		question: 'Prove the following statement directly: $$\\text{If } x, y \\text{ are even integers then } xy \\text{
+ is even}$$.',
+		question_type: 'practice',
+		solution: ['Let $x,y \\in \\mathbb{Z}$ be even integers.',
+							 'Then, by definition of even integers, there exists some $a,b \\in \\mathbb{Z}$ such that $x = 2a$ and
+$y = 2b$.',
+							 'Then we have $$xy = (2a)(2b) = 2(2ab)$$.',
+							 'Thus $xy$ is even.'],
+		module_name: 'logic'
+)
+
+Proof.create(
+		question: 'Prove by contradiction: The circle $x^2 + y^2 = 1$ does not intersect the line $y = 2$.',
+		question_type: 'practice',
+		solution: ['Assume that the circle and line intersect. Let $(a,b)$ be a point of intersection.',
+							 'Then $(a,b)$ satisfies both $$\\text{(i) } x^2 + y^2 = 1 \\text{ and (ii) } y = 2.$$',
+							 'If we substitute (ii) $b = 2$ into (i) $a^2 + b^2 = 1$, we get $$a^2 + (2)^2 = a^2 + 4 = 1
+.$$',
+							 'But then we have $$\\begin{align} a^2 + 4 &= 1 \\newline a^2 &= -3 \\end{align}$$ which is not a real
+number.
+ Contradiction.',
+							 'Thus, the circle $x^2 + y^2 = 1$ does not intersect the line $y = 2$.'],
+		module_name: 'logic'
+)
+
+Proof.create(
+		question: 'Prove by contradiction: $\\sqrt{2}$ is irrational.',
+		question_type: 'practice',
+		solution: ['Assume $\\sqrt{2}$ is rational.',
+							 'Then we can write $\\sqrt{2} = \\frac{a}{b}$ for some integers $a$ and $b$.',
+							 'Hence, $2 = \\frac{a^2}{b^2}$, which yields $2b^2 = a^2$.',
+							 'By the Fundamental Theorem of Arithmetic both $a$ and $b$ can be factored into a unique (up to
+ordering) product of primes.',
+							 'Then $a^2$ can be factored as the product of the primes into which $a$ is factored but with each power
+doubled.',
+							 'Therefore, by unique factorization, the prime $p$ which divides $b$, and also its square, cannot
+divide $a^2$.',
+							 'Therefore the square of an irreducible fraction cannot be reduced to an integer.',
+							 'Therefore the square root of 2 cannot be a rational number.'],
+		module_name: 'logic'
+)
+
+Proof.create(
+		question: 'Let $A,B$ be sets with no elements. Show $A = B$.',
+		question_type: 'practice',
+		solution: ['It is trivially true that, for all $x$, $x \\in A$ implies that $x \\in B$, since both $A$ and $B$
+are assumed empty (or $x \\in A$ is false).',
+							 'Thus $A \\subseteq B$.',
+							 'By symmetry, $B \\subseteq A$. Thus $A = B$.'],
+		module_name: 'induction'
+)
+
+Proof.create(
+		question: 'What is the power set of $\{a,b,c\}$?',
+		question_type: 'practice',
+		solution: ['$\\mathcal{P}(\{a,b,c\}) = \{\emptyset, \{a\}, \{b\}, \{c\}, \{a,b\}, \{a,c\}, \{b,c\}, \{a,b,c\}\}$'],
+		module_name: 'induction'
+)
+
+Proof.create(
+		question: 'Describe the sets $\\text{even}~= \{ x \\in \\mathbb{Z} \\mid x \\text{ is even }\}$ and
+$\\text{odd}~= \{ x \\in \\mathbb{Z} \\mid x \\text{ is odd }\}$.',
+		question_type: 'practice',
+		solution: ['There are infinitely many different representatives for even (likewise for odd).',
+							 'In particular, $$\\overline{0} = \\overline{2} = \\overline{442} = \\text{ even }$$ and $$\\overline{1} = \\overline{127} = \\text{ odd }$$',
+							 'Observe that $\\text{odd} ~\cup~ \\text{even} = \\mathbb{Z}$. Moreover, $\\text{odd} ~\cap~
+\\text{even} = \\emptyset$.',
+							 'This is called a partition of $\\mathbb{Z}$. A partition divides the set into disjoint pieces.'],
+		module_name: 'relations'
+)
+
+Proof.create(
+		question: 'Let $f = \{ (x,y) \\mid x \\in \\mathbb{R}, y = x^2 \}$. Does $f$ define a function?',
+		question_type: 'practice',
+		solution: ['Notice this is a function from $\\mathbb{R}$ to $\\mathbb{R}$ and we can write $f(x) = x^2$.',
+							 'The preimages of $3$ are $\\pm \\sqrt{3}$ since $f(\\pm \\sqrt{3}) = (\\pm\\sqrt{3})^2 = 3$.'],
+		module_name: 'functions'
+)
+
+Proof.create(
+		question: 'Show that $\\mathbb{N}$ is infinite.',
+		question_type: 'practice',
+		solution: ['We first show that the mapping $f : \\mathbb{N} \\to 2\\mathbb{N}$ defined by $f(n) = 2n$ is a
+bijection.',
+							 'Since $$f(x) = f(y) \\Rightarrow 2x = 2y \\Rightarrow x = y,$$ $f$ is injective.',
+							 'Let '],
+		module_name: 'cardinality'
+)

@@ -13,6 +13,26 @@ class ProofsController < ApplicationController
 		@proofs = Proof.where(question_type:'practice')
 	end
 
+	def logic
+		@user = User.find(session['user_id'])
+		@proofs = Proof.where(question_type:'practice', module_name:'logic')
+	end
+
+	def induction
+		@user = User.find(session['user_id'])
+		@proofs = Proof.where(question_type:'practice', module_name:'induction')
+	end
+
+	def relations
+		@user = User.find(session['user_id'])
+		@proofs = Proof.where(question_type:'practice', module_name:'relations')
+	end
+
+	def functions
+		@user = User.find(session['user_id'])
+		@proofs = Proof.where(question_type:'practice', module_name:'functions')
+	end
+
 	def quiz
 		@user = User.find(session['user_id'])
 		@proofs = Proof.where(question_type:'quiz')
@@ -38,7 +58,7 @@ class ProofsController < ApplicationController
 	private
 	def proof_params
 		params.require(:lower).permit(:user_id, :question_type, :question, :solution, :answer_choices,
-																	:correct)
+																	:correct, :hint)
 	end
 	
 end

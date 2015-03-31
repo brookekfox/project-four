@@ -1,0 +1,104 @@
+<%= render 'nav' %>
+
+<!--find a random entry in the array of available ids-->
+<% ids = Array.new %>
+<% @proofs.each do |p| %>
+	<% ids.push(p.id) %>
+<% end %>
+<% id = ids.sample %>
+
+<div class="precalc-practice-question">
+	<%= @proofs.find(id).question %>
+	<br><br>
+	<button type="button" class="btn btn-default" id="precalc-solution-button">Solution</button>
+
+	<% if @proofs.find(id).hint != nil %>
+		<button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#hintModal">
+			Hint
+		</button>
+		<!-- Modal -->
+		<div class="modal fade" id="hintModal" tabindex="-1" role="dialog" aria-labelledby="hintModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="hintModalLabel">Hint</h4>
+					</div>
+					<div class="modal-body">
+						<%= @proofs.find(id).hint %>
+					</div>
+				</div>
+			</div>
+		</div>
+	<% end %>
+</div>
+
+<div id="practice-solutions-box" class="practice-solution">
+	<div class="practice-solution-step" style="display:none;">
+		<ol>
+			<% @proofs.find(id).solution.each do |step| %>
+				<% index = @proofs.find(id).solution.index(step) %>
+				<li id="Step<%= index+1 %>"><%= step %></li>
+			<% end %>
+		</ol>
+		<br><br>
+		<button type="button" class="btn btn-default btn-sm" id="step" onclick="ShowStep()" disabled="true">
+			show next step
+		</button>
+		<button type="button" class="btn btn-default btn-sm" id="reset" onclick="ResetSteps()" disabled="true">
+			reset steps
+		</button>
+	</div>
+</div>
+
+<div style="margin: 0 auto;width:20%;">
+	<div class="row">
+		<div class="col-md-6 col-centered">
+			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#trigModal">
+				Important Sets
+			</button>
+			<!-- Modal -->
+			<div class="modal fade" id="trigModal" tabindex="-1" role="dialog" aria-labelledby="trigModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h3 class="modal-title" id="trigModalLabel">Important Sets</h3>
+						</div>
+						<div class="modal-body">
+							<h3>Real Numbers</h3>
+							<p>$$\mathbb{R} = (-\infty,\infty)$$</p>
+							<h3>Integers</h3>
+							<p>$$\mathbb{Z} = \{\ldots,-3,-2,-1,0,1,2,3,\ldots\}$$</p>
+							<h3>Natural Numbers</h3>
+							<p>$$\mathbb{N} = \{1,2,3,4,\ldots\}$$</p>
+							<h3>Rational Numbers</h3>
+							<p>$$\mathbb{Q} = \left\{ \frac{p}{q} \mid p,q \in \mathbb{Z}, q \neq 0 \right\}$$</p>
+							<h3>Complex Numbers</h3>
+							<p>$$\mathbb{C} = \left\{ a + ib \mid a,b \in \mathbb{R} \right\}$$</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="next-question">
+				<button type="button" class="btn btn-success btn-lg">
+					<%= link_to 'Next question', relations_proofs_path(session['user_id']), :style => 'font-decoration:none;
+					color:#f0f0f0' %>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<ol class="breadcrumb">
+	<li><%= link_to 'Dashboard', user_path(session['user_id']) %></li>
+	<li><%= link_to 'Proof Writing', dash_proofs_path(session['user_id']) %></li>
+	<li><%= link_to 'Practice', practice_proofs_path(session['user_id']) %></li>
+	<li class="active">Relations</li>
+</ol>

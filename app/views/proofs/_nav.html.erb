@@ -38,11 +38,11 @@
 				<button class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu">
-					<li><%= link_to 'Logic and common proof techniques', dash_proofs_path(session['user_id']) %></li>
-					<li><%= link_to 'Set theory and induction', dash_proofs_path(session['user_id']) %></li>
-					<li><%= link_to 'Relations', dash_proofs_path(session['user_id']) %></li>
-					<li><%= link_to 'Functions', dash_proofs_path(session['user_id']) %></li>
-					<li><%= link_to 'Cardinality', dash_proofs_path(session['user_id']) %></li>
+					<li><%= link_to 'Logic and common proof techniques', logic_proofs_path(session['user_id']) %></li>
+					<li><%= link_to 'Set theory and induction', induction_proofs_path(session['user_id']) %></li>
+					<li><%= link_to 'Relations', relations_proofs_path(session['user_id']) %></li>
+					<li><%= link_to 'Functions', functions_proofs_path(session['user_id']) %></li>
+					<li><%= link_to 'Cardinality', cardinality_proofs_path(session['user_id']) %></li>
 					<li><%= link_to 'Modular arithmetic', dash_proofs_path(session['user_id']) %></li>
 					<li><%= link_to 'Intro to abstract algebra', dash_proofs_path(session['user_id']) %></li>
 				</ul>

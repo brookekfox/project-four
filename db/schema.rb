@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150329015227) do
+ActiveRecord::Schema.define(version: 20150330215923) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20150329015227) do
     t.datetime "updated_at",                  null: false
     t.string   "question_type"
     t.string   "module_name"
+    t.text     "hint"
   end
 
   create_table "business_maths", force: :cascade do |t|
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(version: 20150329015227) do
     t.datetime "updated_at",                  null: false
     t.string   "question_type"
     t.string   "module_name"
+    t.text     "hint"
   end
 
   create_table "linears", force: :cascade do |t|
@@ -50,6 +52,7 @@ ActiveRecord::Schema.define(version: 20150329015227) do
     t.string   "module_name"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.text     "hint"
   end
 
   create_table "lowers", force: :cascade do |t|
@@ -62,6 +65,7 @@ ActiveRecord::Schema.define(version: 20150329015227) do
     t.datetime "updated_at",                  null: false
     t.string   "question_type"
     t.string   "module_name"
+    t.text     "hint"
   end
 
   create_table "practices", force: :cascade do |t|
@@ -96,6 +100,7 @@ ActiveRecord::Schema.define(version: 20150329015227) do
     t.datetime "updated_at",                  null: false
     t.string   "question_type"
     t.string   "module_name"
+    t.text     "hint"
   end
 
   create_table "quizzes", force: :cascade do |t|
@@ -118,6 +123,7 @@ ActiveRecord::Schema.define(version: 20150329015227) do
     t.datetime "updated_at",                  null: false
     t.string   "question_type"
     t.string   "module_name"
+    t.text     "hint"
   end
 
   create_table "users", force: :cascade do |t|
