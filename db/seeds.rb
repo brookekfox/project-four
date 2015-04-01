@@ -183,7 +183,7 @@ Identity.'],
 )
 
 
-# ----------------------------------------      QUIZ QUESTIONS -------------------------------------------
+# ---------------------------------------- PRECALC QUIZ QUESTIONS -------------------------------------------
 Precalc.create(
 		question: 'Write $\\tan{\\theta} + \\cot{\\theta}$ in terms of sine and cosine, and then simplify the expression.',
 		question_type: 'quiz',
@@ -205,7 +205,7 @@ Precalc.create(
 		module_name: 'sine'
 )
 Precalc.create(
-		question: 'Solve $5(2^x) - 3 = 14$',
+		question: 'Solve $5(2^x) - 3 = 14$ for $x$.',
 		question_type: 'quiz',
 		answer_choices: ['$x = \\ln{2}$','$x \\approx 1.7655$','$x \\approx 1.2238$'],
 		correct: '$x \\approx 1.7655$',
@@ -384,6 +384,56 @@ Proof.create(
 		solution: ['We first show that the mapping $f : \\mathbb{N} \\to 2\\mathbb{N}$ defined by $f(n) = 2n$ is a
 bijection.',
 							 'Since $$f(x) = f(y) \\Rightarrow 2x = 2y \\Rightarrow x = y,$$ $f$ is injective.',
-							 'Let '],
+							 'We know $2\\mathbb{N} = \{2k \\mid k \\in \\mathbb{N} \}$. Let $y \\in 2\\mathbb{N}$. Then there
+exists $k \\in \\mathbb{N}$ such that $y = 2k$.',
+							 'Observe that $$f(k) = 2k = y.$$ Thus $f$ is surjective.',
+							 'Therefore $\\mathbb{N} \\approx 2\\mathbb{N}$, and since $2\\mathbb{N}$ is a proper subset of
+$\\mathbb{N}$, it follows that $\\mathbb{N}$ is infinite.'],
 		module_name: 'cardinality'
+)
+
+Proof.create(
+		question: 'Define a relation $R_n$ for $a,b \\in \\mathbb{Z}$ by $$a R_n b \\iff n \\mid (a−b).$$ Prove that
+$R_n$ is an equivalence relation.',
+		question_type: 'practice',
+		solution: ['First, it is clear that $R_n \\subseteq \\mathbb{Z} \\times \\mathbb{Z}$. We must show that $R_n$ is
+reflexive, symmetric, and transitive.',
+							 'Let $a \\in \\mathbb{Z}$. Then $a−a=0$. Hence $a R_n a$. Thus $R_n$ is reflexive.',
+							 'If $a R_n b$, then $n \\mid (a−b)$. So there exists $k \\in \\mathbb{Z}$ such that $a−b = nk$. Hence $b-a = n(−k)$. Thus $n \\mid (b − a)$ and we find $b R_n a$. This shows $R_n$ is symmetric.',
+							 'If $a R_n b$ and $b R_n c$, then there exist $k,l \\in \\mathbb{Z}$ such that $a−b = nk$ and $c−b = nl$. Observe that $a−c=(b+nk)−(b+nl) = n(k−l)$. Hence $a R_n c$. Thus $R_n$ is transitive.',
+							 'Therefore $R_n$ is an equivalence relation on $\\mathbb{Z}$.'],
+		module_name: 'modulo'
+)
+
+Proof.create(
+		question: 'Let $(G, \\star)$ be a group. Prove that $(a \\star b)^{−1} = b^{−1} \\star a^{−1}$.',
+		question_type: 'practice',
+		solution: ['Let $a,b \\in G$. Notice that since $G$ is closed under inverses we know $a^{−1}, b^{−1} \\in G$.',
+							 'Observe that $$(a \\star b) \\star (b^{-1} \\star a^{-1}) = a \\star b \\star b^{-1} \\star a^{-1} = a \\star e \\star a^{-1} = a \\star a^{-1} = e$$ and $$(b^{-1} \\star a^{-1}) \\star (a \\star b) = b^{-1} \\star a^{-1} \\star a \\star b = b^{-1} \\star e \\star b = b^{-1} \\star b = e.$$',
+							 'Therefore, $(a \\star b)^{−1} = b^{−1} \\star a^{−1}$.'],
+		module_name: 'algebra'
+)
+
+Proof.create(
+		question: '$G = \\mathbb{Z}_6$ is an additive group. Show $H = \{0, 3\}$ is a subgroup of $G$.',
+		question_type: 'practice',
+		solution: ['Notice that $0 + 0 = 0$ and $3 + 3 = 0$ thus $H$ contains the identity and each element has an
+inverse.',
+							 'Moreover, it is clear that addition in $H$ is commutative and associative. Thus $H < G$.'],
+		module_name: 'algebra'
+)
+
+Proof.create(
+		question: 'Let $G$ be a group. Let $a \\in G$. Show that $$\\langle a \\rangle = \{a^n \\mid n \\in
+\\mathbb{Z}\}$$ is an abelian subgroup of $G$.',
+		question_type: 'practice',
+		solution: ['Let $G$ be a group and let $a \\in G$. Note that $a \\in \\langle a \\rangle$, so $\\langle a
+\\rangle \\neq \\emptyset$.',
+							 'Suppose that $x,y \\in \\langle a \\rangle$. Then there exist $s,t \\in \\mathbb{Z}$ such that $x =
+a^s$ and $y = a^t$. Furthermore, $y^{-1} = a^{-t}$.',
+							 'Now we have that $$xy^{−1} = a^s a^{−t} = a^{s−t} \\in \\langle a \\rangle.$$',
+							 'Therefore, by the subgroup test, we have that $\\langle a \\rangle$ is a subgroup of $G$.',
+							 'Then $\\langle a \\rangle$ is abelian since, for all $a^s, a^t \\in \\langle a \\rangle$, we have
+$$a^s a^t = a^{s+t} = a^{t+s} = a^t a^s.$$'],
+		module_name: 'algebra'
 )

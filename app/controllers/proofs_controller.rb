@@ -33,6 +33,21 @@ class ProofsController < ApplicationController
 		@proofs = Proof.where(question_type:'practice', module_name:'functions')
 	end
 
+	def cardinality
+		@user = User.find(session['user_id'])
+		@proofs = Proof.where(question_type:'practice', module_name:'cardinality')
+	end
+
+	def modulo
+		@user = User.find(session['user_id'])
+		@proofs = Proof.where(question_type:'practice', module_name:'modulo')
+	end
+
+	def algebra
+		@user = User.find(session['user_id'])
+		@proofs = Proof.where(question_type:'practice', module_name:'algebra')
+	end
+
 	def quiz
 		@user = User.find(session['user_id'])
 		@proofs = Proof.where(question_type:'quiz')
